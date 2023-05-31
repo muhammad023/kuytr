@@ -1,0 +1,17 @@
+
+
+
+def video_yuklab_bering (link):
+
+    url = "https://youtube-media-downloader.p.rapidapi.com/v2/video/details"
+
+    querystring = {"videoId":link}
+
+    headers = {
+        "X-RapidAPI-Key": "06edaf8fc3msh5bb632cb7680731p157927jsn2375443cf21c",
+        "X-RapidAPI-Host": "youtube-media-downloader.p.rapidapi.com"
+    }
+
+    response = requests.get(url, headers=headers, params=querystring)
+
+    return response.json()
